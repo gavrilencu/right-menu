@@ -1,0 +1,78 @@
+{
+  "settings": {
+    "bypassModifier": "Ctrl",
+    "disableInFullscreen": true,
+    "scale": 1.0,
+    "accentColors": [ "#22D3EE", "#8B5CF6", "#EC4899" ],
+    "excludedProcesses": [
+      "mstsc", "vmconnect", "VirtualBoxVM", "vmware",
+      "StartMenuExperienceHost", "SearchHost", "ShellExperienceHost"
+    ],
+    "excludedWindowClasses": [
+      "Shell_TrayWnd", "Shell_SecondaryTrayWnd", "NotifyIconOverflowWindow",
+      "TopLevelWindowForOverflowXamlIsland", "#32768"
+    ]
+  },
+
+  "items": [
+    { "label": "Copiază", "icon": "E8C8", "action": "keys", "param": "Ctrl+C" },
+    { "label": "Lipește", "icon": "E77F", "action": "keys", "param": "Ctrl+V" },
+
+    { "label": "Editare", "icon": "E70F", "items": [
+      { "label": "Decupează",         "icon": "E8C6", "action": "keys", "param": "Ctrl+X" },
+      { "label": "Anulează",          "icon": "E7A7", "action": "keys", "param": "Ctrl+Z" },
+      { "label": "Refă",              "icon": "E7A6", "action": "keys", "param": "Ctrl+Y" },
+      { "label": "Selectează tot",    "icon": "E8B3", "action": "keys", "param": "Ctrl+A" },
+      { "label": "Istoric clipboard", "icon": "E81C", "action": "keys", "param": "Win+V" },
+      { "label": "Emoji",             "icon": "E76E", "action": "keys", "param": "Win+." },
+      { "label": "Data și ora",       "icon": "EC92", "action": "type", "param": "{date} {time}", "hint": "inserează textul" }
+    ]},
+
+    { "label": "Caută", "icon": "E721", "items": [
+      { "label": "Google",        "icon": "E721", "action": "search", "param": "https://www.google.com/search?q={q}", "hint": "textul selectat" },
+      { "label": "Traducere",     "icon": "F2B7", "action": "search", "param": "https://translate.google.com/?sl=auto&tl=ro&text={q}&op=translate", "hint": "textul selectat" },
+      { "label": "YouTube",       "icon": "E714", "action": "search", "param": "https://www.youtube.com/results?search_query={q}", "hint": "textul selectat" },
+      { "label": "Deschide link", "icon": "E8A7", "action": "openlink", "hint": "linkul selectat" }
+    ]},
+
+    { "label": "Media", "icon": "E8D6", "items": [
+      { "label": "Anterior",    "icon": "E892", "action": "keys", "param": "MediaPrev" },
+      { "label": "Play / Pauză", "icon": "E768", "action": "keys", "param": "MediaPlayPause" },
+      { "label": "Următor",     "icon": "E893", "action": "keys", "param": "MediaNext" },
+      { "label": "Volum −",     "icon": "E993", "action": "keys", "param": "VolumeDown" },
+      { "label": "Volum +",     "icon": "E995", "action": "keys", "param": "VolumeUp" },
+      { "label": "Mut",         "icon": "E74F", "action": "keys", "param": "VolumeMute" }
+    ]},
+
+    { "label": "Fereastră", "icon": "E737", "items": [
+      { "label": "Minimizează",    "icon": "E921", "action": "window", "param": "minimize" },
+      { "label": "Maximizează",    "icon": "E922", "action": "window", "param": "maximize", "hint": "sau restabilește" },
+      { "label": "Mereu deasupra", "icon": "E718", "action": "window", "param": "topmost", "hint": "pornit / oprit" },
+      { "label": "Închide",        "icon": "E8BB", "action": "window", "param": "close" }
+    ]},
+
+    { "label": "Aplicații", "icon": "F0E2", "items": [
+      { "label": "Explorer",   "icon": "E838", "action": "run", "param": "explorer.exe" },
+      { "label": "Terminal",   "icon": "E756", "action": "run", "param": "wt.exe -d .|powershell.exe", "hint": "în folderul curent" },
+      { "label": "Notepad",    "icon": "E8A5", "action": "run", "param": "notepad.exe" },
+      { "label": "Calculator", "icon": "E8EF", "action": "run", "param": "calc.exe" },
+      { "label": "Browser",    "icon": "E774", "action": "run", "param": "https://www.google.com" },
+      { "label": "Setări",     "icon": "E713", "action": "run", "param": "ms-settings:" },
+      { "label": "Instrumente", "icon": "EC7A", "items": [
+        { "label": "Paint",               "icon": "E790", "action": "run", "param": "mspaint.exe" },
+        { "label": "Panou de control",    "icon": "E9E9", "action": "run", "param": "control.exe" },
+        { "label": "Manager dispozitive", "icon": "E950", "action": "run", "param": "devmgmt.msc" },
+        { "label": "Informații sistem",   "icon": "E946", "action": "run", "param": "msinfo32.exe" }
+      ]}
+    ]},
+
+    { "label": "Sistem", "icon": "E770", "items": [
+      { "label": "Captură ecran", "icon": "E924", "action": "keys", "param": "Win+Shift+S" },
+      { "label": "Desktop",       "icon": "E7F4", "action": "keys", "param": "Win+D" },
+      { "label": "Task View",     "icon": "E7C4", "action": "keys", "param": "Win+Tab" },
+      { "label": "Task Manager",  "icon": "E9D9", "action": "keys", "param": "Ctrl+Shift+Esc" },
+      { "label": "Blochează",     "icon": "E72E", "action": "system", "param": "lock" },
+      { "label": "Repaus",        "icon": "E708", "action": "system", "param": "sleep" }
+    ]}
+  ]
+}
